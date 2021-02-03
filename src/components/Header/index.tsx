@@ -75,7 +75,7 @@ const HeaderControls = styled.div`
     width: 100%;
     z-index: 99;
     height: 72px;
-    border-radius: 0px 12px 0 0;
+    border-radius: 0;
     background-color: ${({ theme }) => theme.bg1};
   `};
 `
@@ -326,7 +326,7 @@ export default function Header() {
         </Title>
         <HeaderLinks>
           <StyledNavLink id={`swap-nav-link`} to={'/swap'}>
-            {t('swap')}
+            {t('Exchange')}
           </StyledNavLink>
           <StyledNavLink
             id={`pool-nav-link`}
@@ -348,7 +348,7 @@ export default function Header() {
             Vote
           </StyledNavLink>*/}
           <StyledExternalLink id={`stake-nav-link`} href={'https://info.u.exchange'}>
-            Charts <span style={{ fontSize: '11px' }}>↗</span>
+            Info <span style={{ fontSize: '11px' }}>↗</span>
           </StyledExternalLink>
         </HeaderLinks>
       </HeaderRow>
@@ -363,7 +363,7 @@ export default function Header() {
             <UNIWrapper onClick={toggleClaimModal}>
               <UNIAmount active={!!account && !availableClaim} style={{ pointerEvents: 'auto' }}>
                 <TYPE.white padding="0 2px">
-                  {claimTxn && !claimTxn?.receipt ? <Dots>Claiming UNI</Dots> : 'Claim UNI'}
+                  {claimTxn && !claimTxn?.receipt ? <Dots>Claiming UNI</Dots> : 'Claim UCASH'}
                 </TYPE.white>
               </UNIAmount>
               <CardNoise />
